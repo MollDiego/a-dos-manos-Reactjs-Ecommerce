@@ -4,15 +4,16 @@ import "./styles.css";
 
 export const Item = ({ item }) => {
   return (
-    <div className="w-1/2 card-body" key={item.id}>
-      <img src={item.urlImage} alt="img item" width="300px" />
-      <div className="relative ml-10">
-        <h3 className="title">{item.name}</h3>
-        <p className="descripcion">Acá va su descripción</p>
-        <Link to={`/item/${item.id}`}> Link al item</Link>
-        <div className="price">
-          El item cuesta :<p className="text-green-400">${item.price}</p>
-        </div>
+    <div className="card-body" key={item.id}>
+      <img src={item.urlImage} alt="img item" width="250px" className="img" />
+      <div className="text">
+        <h4 className="title">{item.title}</h4>
+        <p className="descripcion">{item.descripcion}</p>
+        <Link to={`/item/${item.id}`} style={{ textDecoration: "none" }}>
+          {" "}
+          Link al item
+        </Link>
+        <div className="price">El item cuesta : ${item.price}</div>
       </div>
     </div>
   );

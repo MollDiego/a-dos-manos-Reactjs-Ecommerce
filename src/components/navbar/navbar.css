@@ -1,0 +1,28 @@
+.header-conrainer {
+  justify-content: space-between;
+  height: 88px;
+  width: 100%;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+.navLink {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.nav {
+  text-decoration: none;
+}

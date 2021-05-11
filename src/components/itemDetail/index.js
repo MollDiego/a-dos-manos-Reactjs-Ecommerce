@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ItemCount } from "../itemCount";
+import "./itemDetail.css";
+import "../item/styles.css";
 
 export const ItemDatail = ({ item }) => {
   const [count, setCount] = useState(0);
@@ -10,18 +12,18 @@ export const ItemDatail = ({ item }) => {
   }
   return (
     <div className="flex flex-col items-center">
-      <div className="w-1/2 card-body">
-        <img src={item.urlImage} alt="img item" width="300px" />
-        <div className="relative ml-10">
+      <div className="card-body">
+        <img src={item.urlImage} alt="img item" width="250px" className="img" />
+        <div className="text">
           <h3 className="title">{item.title}</h3>
-          <p className="descripcion">Acá va su descripción</p>
-          <div className="price">
-            El item cuesta :<p className="text-green-400">${item.price}</p>
-          </div>
+          <p className="descripcion">{item.descripcion}</p>
+          <div className="price">El item cuesta : ${item.price}</div>
         </div>
       </div>
       {count === 0 ? (
-        <ItemCount stock={5} initial={0} onAdd={addHandler}></ItemCount>
+        <div className="count">
+          <ItemCount stock={5} initial={0} onAdd={addHandler}></ItemCount>
+        </div>
       ) : (
         <Link to="/cart">
           <button className="p-4 bg-green-500 text-white rounded">

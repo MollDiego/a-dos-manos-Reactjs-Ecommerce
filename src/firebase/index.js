@@ -2,12 +2,12 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyAmPITUM4FfvTxqTRhqDDq9lTiDeJLfi0o",
-  authDomain: "a-dos-manos-ecommerce.firebaseapp.com",
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
   projectId: "a-dos-manos-ecommerce",
-  storageBucket: "a-dos-manos-ecommerce.appspot.com",
-  messagingSenderId: "337729784456",
-  appId: "1:337729784456:web:035cef6c91cb380401ad3d",
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGIN_SENDER_ID,
+  appId: process.env.APP_ID,
 });
 
 export const getFirebase = () => {
