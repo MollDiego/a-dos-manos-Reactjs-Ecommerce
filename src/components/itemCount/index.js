@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import add from "../../img/add.svg";
 import remove from "../../img/remove.svg";
+import "./styles.css";
 
 export const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
@@ -21,22 +22,18 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
     onAdd(count);
   }
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-row justify-center mt-4 mb-4">
-        <button type="button" onClick={adding} className="mr-10">
+    <div className="flex-col">
+      <div className="flex-row count-container justify-center mt-4 mb-4">
+        <button type="button" onClick={adding} className="button-add">
           <img src={add} height="24px" width="24px" alt="add" />
         </button>
         {count}
-        <button onClick={removing} type="button" className="ml-10">
+        <button onClick={removing} type="button" className="button-remove">
           <img src={remove} height="24px" width="24px" alt="remove" />
         </button>
       </div>
       <div>
-        <button
-          className="p-4 bg-blue-400 text-white rounded"
-          type="button"
-          onClick={agregar}
-        >
+        <button className="button-end" type="button" onClick={agregar}>
           Agregar al carrito
         </button>
       </div>
