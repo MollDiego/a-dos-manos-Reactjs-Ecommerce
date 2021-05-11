@@ -27,9 +27,7 @@ export const ItemDetailContainer = () => {
   console.log(item);
 
   return (
-    <div className="text-red-400 mt-4">
-      {item == null ? "Esta cargando" : <ItemDetail item={item} />}
-    </div>
+    <div>{item == null ? "Esta cargando" : <ItemDetail item={item} />}</div>
   );
 };
 

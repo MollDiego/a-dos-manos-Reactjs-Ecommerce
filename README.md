@@ -44,7 +44,6 @@ npm start
 
 - [React](https://es.reactjs.org/) - El framework web usado
 - [Firebase](https://firebase.google.com/?hl=es) - Cloud DB
-- [SASS](https://sass-lang.com/) - css Preprocessor
 
 ## Licencia 📄
 

@@ -1,17 +1,28 @@
 .card-body {
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto;
   padding: 15px;
-  border: 1px solid rgb(71, 71, 71);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   font-size: large;
+  position: relative;
+  width: 75%;
+  background-color: #eef5ff;
+}
+
+.img {
+  border-radius: 4px;
+}
+
+.text {
+  margin-left: 3rem;
+  text-align: left;
 }
 
 .title {
-  font-weight: 600;
   color: #4b5563;
+  margin: 5px;
 }
 
 .descripcion {
@@ -24,4 +35,5 @@
   color: #4b5563;
   font-weight: 500;
   display: flex;
+  margin-bottom: 1rem;
 }

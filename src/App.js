@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { ItemDetailContainer } from "./components/itemDetailContainer";
 import { CartProvider } from "./context/CartContext";
 import { Cart } from "./components/cart";
+import { Home } from "./components/home";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <NavBar />
           <Switch>
             <Route exact path="/">
-              Hola
+              <Home />
             </Route>
             <Route path="/category/:categoryId">
               <ItemListContainer />
