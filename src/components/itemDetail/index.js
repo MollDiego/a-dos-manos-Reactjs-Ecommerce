@@ -30,9 +30,18 @@ export const ItemDatail = ({ item }) => {
           <ItemCount stock={5} initial={0} onAdd={addHandler}></ItemCount>
         </div>
       ) : (
-        <Link to="/cart">
-          <button className="button-finish">Terminar mi compra</button>
-        </Link>
+        <div>
+          <div className="button-container">
+            <Link to="/cart">
+              <button className="button finish">Terminar mi compra</button>
+            </Link>
+          </div>
+          <div className="button-container">
+            <Link to="/">
+              <button className="button seguir">Seguir Comprando</button>
+            </Link>
+          </div>
+        </div>
       )}
     </div>
   );

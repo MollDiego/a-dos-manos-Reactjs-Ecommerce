@@ -4,11 +4,11 @@ import { CartContext } from "../../context/CartContext";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { getFirestore } from "../../firebase";
+import "./style.css";
 
 export const Cart = () => {
-  const { cart, removeItem, totalItems, totalPrecio, clear } = useContext(
-    CartContext
-  );
+  const { cart, removeItem, totalItems, totalPrecio, clear } =
+    useContext(CartContext);
   const generarOrden = () => {
     const db = getFirestore();
     const ordersCol = db.collection("orders");

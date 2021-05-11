@@ -3,11 +3,22 @@
   margin-right: auto;
 }
 
-.button-finish {
+.button {
   padding: 0.75rem;
-  background-color: rgb(0, 250, 54);
   color: white;
   font-weight: 600;
   border-radius: 4px;
   border: 0px;
+}
+
+.finish {
+  background-color: rgb(236, 77, 49);
+}
+
+.seguir {
+  background-color: rgb(0, 250, 54);
+}
+
+.button-container {
+  margin-bottom: 1rem;
 }
