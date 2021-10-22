@@ -6,13 +6,12 @@ import "../item/styles.css";
 import { CartContext } from "../../context/CartContext";
 
 export const ItemDatail = ({ item }) => {
-  const [count, setCount] = useState(0);
-
+  const [show, setShow] = useState(true);
   const { addItem } = useContext(CartContext);
 
   const addHandler = (contador) => {
     addItem(item, contador);
-    setCount(contador);
+    setShow(false);
   };
 
   return (
@@ -25,7 +24,7 @@ export const ItemDatail = ({ item }) => {
           <div className="price">El item cuesta : ${item.price}</div>
         </div>
       </div>
-      {count === 0 ? (
+      {show ? (
         <div className="count">
           <ItemCount stock={5} initial={0} onAdd={addHandler}></ItemCount>
         </div>
